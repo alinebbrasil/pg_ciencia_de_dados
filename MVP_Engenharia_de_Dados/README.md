@@ -1,113 +1,132 @@
-Requisitos para o Desenvolvimento do MVP
+# MVP — Pipeline de Dados e Análise com Olist
 
-Descrição
+## 📌 Descrição
 
+Este projeto acadêmico consiste no desenvolvimento de um **MVP de Engenharia de Dados**, no qual foi construído um **pipeline de dados em nuvem** contemplando as etapas de **busca, coleta, modelagem, carga e análise de dados**.
 
-Neste trabalho, você deverá ser capaz de construir um pipeline de dados utilizando tecnologias na nuvem. O pipeline irá envolver a busca, coleta, modelagem, carga e análise dos dados.
+O trabalho utiliza dados públicos da empresa **Olist**, amplamente conhecidos no contexto de e-commerce brasileiro, com o objetivo de explorar, organizar e analisar informações relacionadas a pedidos, clientes, produtos e pagamentos.
 
+---
 
+## 🎯 Objetivo
 
-Objetivo
+O objetivo principal deste MVP é demonstrar, na prática, a construção de um pipeline de dados funcional, aplicando conceitos de **Engenharia de Dados** e **Análise de Dados**.
 
+A partir do conjunto de dados da Olist, o projeto busca responder, entre outras, às seguintes perguntas:
 
-Comece pelo objetivo do seu trabalho. Antes de iniciar sua busca pelos dados, pense e descreva claramente qual problema deseja resolver com este MVP. Enumere as perguntas que deseja responder.
+* Como se distribuem os pedidos ao longo do tempo?
+* Quais são os estados e cidades com maior volume de pedidos?
+* Quais categorias de produtos apresentam maior volume de vendas?
+* Qual o comportamento dos pagamentos (formas de pagamento e valores)?
 
-É de extrema importância que esta etapa seja feita antes de iniciar qualquer outra etapa.
+Nem todas as perguntas necessariamente precisam ser respondidas integralmente. As limitações encontradas e os objetivos não atingidos são discutidos na seção de **Autoavaliação**.
 
-Uma vez traçado o objetivo e conhecendo bem qual problema se deseja resolver, quais perguntas se deseja responder, é hora de iniciar a busca pelos dados.    
+---
 
-Não é necessário atingir todos os objetivos desenhados nesta seção. Assim, não remova perguntas as quais não se conseguiu responder. Deixe a documentação do objetivo intacta e faça uma boa discussão do atingimento deste ao final do trabalho (vide Autoavaliação).
+## ☁️ Plataforma e Tecnologias Utilizadas
 
+* **Plataforma:** Databricks (Community Edition)
+* **Linguagem:** Python
+* **Bibliotecas:** Pandas, NumPy, Matplotlib, Seaborn
+* **Ambiente de Desenvolvimento:** Jupyter Notebook
+* **Controle de Versão:** Git e GitHub
 
+---
 
-Plataforma
-Vamos direcionar os esforços de apoio na Plataforma Databricks. A Databricks possui uma versão de uso chamada Databricks Community Edition, que é de uso gratuito, com limitação na qualidade e quantidade de máquinas no cluster.
+## 📂 Fonte dos Dados
 
-Não haverá limitação de utilização de outras plataformas de dados e provedores de nuvem. Todos os trabalhos, em qualquer plataforma escolhida pelo aluno, serão devidamente avaliados. Entretanto, conforme dito acima, nossos esforços estarão voltados para a solução e apoio com problemas dos alunos na Plataforma Databricks.
+Os dados utilizados neste projeto são públicos e foram obtidos a partir do **Kaggle**, no dataset:
 
+**Brazilian E-Commerce Public Dataset by Olist**
 
+Este conjunto de dados contém informações anonimizadas sobre pedidos realizados na plataforma Olist, incluindo dados de clientes, vendedores, produtos, pagamentos e avaliações.
 
-Detalhamento
-1. Busca pelos dados
+---
 
-Escolha uma base de dados para utilizar em seu MVP de forma que se possa atingir os objetivos traçados na etapa anterior.
+## 🔍 Etapas do Projeto
 
-Há inúmeras bases de dados gratuitas disponíveis na web, por exemplo:
+### 1️⃣ Busca e Coleta dos Dados
 
-Google Cloud Public Datasets (https://cloud.google.com/datasets)
-Kaggle (https://www.kaggle.com/datasets)
-Portal da Transparência (https://portaldatransparencia.gov.br/)
-IMDB (https://datasets.imdbws.com/)
-Tableau (https://www.tableau.com/learn/articles/free-public-data-sets)
-Stanford Large Network Dataset Collection (https://snap.stanford.edu/data/index.html)
-Yelp Open Dataset (https://www.yelp.ca/dataset)
-Discutiremos sobre bases de dados abertas disponíveis para o MVP no Discord e iremos montar colaborativamente um repositório de possibilidades.
+Os arquivos foram obtidos diretamente do Kaggle e armazenados no ambiente em nuvem para posterior processamento. Por se tratar de um dataset público e estruturado, não foi necessário realizar web scraping.
 
-Caso haja uma licença de uso para o conjunto de dados escolhido, isto deve constar na documentação do MVP.
+### 2️⃣ Modelagem dos Dados
 
- 
+Os dados foram organizados seguindo uma abordagem semelhante a um **Data Lake**, mantendo os arquivos separados por conceito (clientes, pedidos, produtos, pagamentos, etc.).
 
-2. Coleta
+Foi realizada a análise da estrutura de cada conjunto de dados, incluindo:
 
-Uma vez definido o conjunto de dados, devemos coletar e armazená-los na nuvem.
+* Tipos de dados;
+* Chaves de relacionamento;
+* Valores esperados para atributos numéricos e categóricos.
 
-É possível que, a partir de sua escolha do conjunto de dados, seja necessária uma etapa de construção de robôs de coleta, e.g. via Web Scraping. Neste caso, atente-se para questões éticas sobre se é possível utilizar os robôs de coleta de informação nos sites escolhidos.
+### 3️⃣ Carga e Transformações
 
-Caso tenha optado por utilizar um conjunto de dados real da empresa onde trabalha, tenha bastante cuidado com a confidencialidade destes dados e/ou das análises que serão feitas em sequência.
+Durante esta etapa, foram realizadas transformações como:
 
- 
+* Limpeza de dados;
+* Conversão de tipos;
+* Junção de tabelas relacionadas;
+* Criação de novas variáveis auxiliares para análise.
 
-3. Modelagem
+As transformações foram documentadas diretamente no notebook por meio de células de código e comentários explicativos.
 
-Você deve construir um modelo de dados em Esquema Estrela ou Snowflake, como em um Data Warehouse, ou flat por cada conceito, como em um Data Lake.
+### 4️⃣ Análise de Dados
 
-Independentemente do modelo, deve ser construído um Catálogo de Dados contendo minimamente uma descrição detalhada dos dados e seus domínios, contendo valores mínimos e máximos esperados para dados numéricos, e possíveis categorias para dados categóricos.
+A análise foi dividida em duas partes:
 
-Este modelo deve também descrever a linhagem dos dados, de onde os mesmos foram baixados e qual técnica foi utilizada para compor o conjunto de dados, caso haja.
+#### a) Qualidade dos Dados
 
- 
+Foi realizada uma verificação de:
 
-4. Carga
+* Valores nulos;
+* Inconsistências;
+* Distribuição dos dados por atributo.
 
-Nesta etapa, será feita a carga dos dados para o Data Warehouse/Data Lake. Na avaliação, nesta etapa, será dado valor pela utilização da pipelines de ETL (Extração, Transformação e Carga) na plataforma de dados utilizada. Iremos discutir pipelines de ETL na Plataforma Databricks durante nossos encontros pelo Zoom e no Discord.
+Mesmo tratando-se de um dataset relativamente bem estruturado, a análise exploratória foi essencial para validar a confiabilidade das informações.
 
-Deve-se documentar os processos de transformação e carga, principalmente os de transformação, e.g. a junção e conciliação de dois conjuntos de dados diferentes.
+#### b) Solução do Problema
 
- 
+Foram aplicadas análises exploratórias e visualizações para responder às perguntas definidas no objetivo do projeto. Os resultados obtidos foram discutidos ao longo do notebook, conectando os dados analisados ao problema proposto.
 
-5. Análise
+---
 
-Vamos dividir a etapa de análise em duas: qualidade de dados e solução do problema.
+## 📦 Estrutura do Repositório
 
- 
+```
+pg_ciencia_de_dados/
+│
+├── MVP_Engenharia_de_Dados/
+│   └── MVP_Engenharia_de_Dados.ipynb
+│
+└── README.md
+```
 
-          a. Qualidade de dados
+---
 
-Deve ser feita uma análise da qualidade para cada atributo do conjunto de dados. Existem problemas no conjunto de dados? Caso haja, como esses problemas podem ser resolvidos para que não afetem as respostas das perguntas que quer solucionar?
+## 📊 Resultados
 
-É possível que não se encontre problemas nos conjuntos de dados, em alguns casos há conjuntos de dados curados e já bem tratados antes de serem disponibilizados. Entretanto, mesmo nestes casos, espera-se que seja feita uma análise de valores por atributo e que se demonstre que não se encontrou problemas.
+Os resultados incluem análises estatísticas e visualizações que permitem compreender melhor o comportamento dos pedidos, clientes e pagamentos na plataforma Olist.
 
- 
+As evidências das análises estão disponíveis diretamente no notebook, por meio de gráficos e tabelas.
 
-          b. Solução do problema
+---
 
-Chegou o momento de se solucionar o problema em questão, definido preliminarmente nos objetivos. Deve-se buscar respostas para as perguntas elencadas. Para cada resposta obtida tecnicamente através da análise dos dados deve haver uma discussão do seu resultado, conectando os números obtidos às respostas ao problema a ser solucionado.
+## 📝 Autoavaliação
 
-Ao final, deve haver uma discussão de uma forma geral sobre a solução do problema a partir das discussões de cada resposta.
+O desenvolvimento deste MVP permitiu aplicar, de forma prática, os conceitos de Engenharia de Dados vistos ao longo da disciplina.
 
-Aqui, podem ser utilizadas bibliotecas Python vistas na disciplina Análise Exploratória e Pré-Processamento de Dados, ou as ferramentas vistas na disciplina Visualização de Informação. Entretanto, caso não tenha ainda cursado estas disciplinas, é possível responder as perguntas do objetivo somente através da linguagem SQL, objeto da disciplina de Banco de Dados ou através da linguagem de consulta do banco NoSQL escolhido, objeto da disciplina de Data Warehouse.
+Os principais desafios estiveram relacionados à compreensão do volume de dados, à modelagem adequada das tabelas e à definição das análises mais relevantes.
 
+Como trabalhos futuros, o projeto pode ser expandido com:
 
+* Implementação de pipelines automatizados de ETL;
+* Utilização de um modelo dimensional (Esquema Estrela);
+* Integração com ferramentas de visualização como Power BI ou Tableau.
 
-Entrega
-O trabalho é individual.
+---
 
-Deverá ser disponibilizado todo código construído em um repositório público do GitHub. Se tiver dúvidas sobre como criar um repositório público no GitHub, consulte https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-new-repository
+## 👩‍🎓 Autora
 
-Algumas tarefas das etapas do trabalho podem ser feitas a partir de componentes visuais da plataforma de nuvem. Desta forma, deve se gerar evidência da execução destes passos através de screenshots ou vídeos.
+**Aline Bastos Brasil**
 
-Deve se gerar evidência dos resultados das respostas às perguntas que definem o problema do MVP através de screenshots ou vídeos.
-
-Autoavaliação
-Ao finalizar o trabalho, é esperado que o aluno faça uma autoavaliação contendo uma discussão sobre se conseguiu atingir os objetivos delineados antes do início das outras etapas, suas dificuldades encontradas na execução do trabalho, bem como trabalhos futuros para enriquecer o problema e sua solução em seu portifólio.
-
+Projeto acadêmico desenvolvido para fins educacionais.
