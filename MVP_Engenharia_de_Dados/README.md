@@ -120,7 +120,6 @@ Os principais desafios estiveram relacionados à compreensão do volume de dados
 Como trabalhos futuros, o projeto pode ser expandido com:
 
 * Implementação de pipelines automatizados de ETL;
-* Utilização de um modelo dimensional (Esquema Estrela);
 * Integração com ferramentas de visualização como Power BI ou Tableau.
 
 ---
