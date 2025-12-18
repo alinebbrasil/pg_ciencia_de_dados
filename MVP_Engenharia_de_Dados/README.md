@@ -1,10 +1,15 @@
 Requisitos para o Desenvolvimento do MVP
+
 Descrição
+
+
 Neste trabalho, você deverá ser capaz de construir um pipeline de dados utilizando tecnologias na nuvem. O pipeline irá envolver a busca, coleta, modelagem, carga e análise dos dados.
 
 
 
 Objetivo
+
+
 Comece pelo objetivo do seu trabalho. Antes de iniciar sua busca pelos dados, pense e descreva claramente qual problema deseja resolver com este MVP. Enumere as perguntas que deseja responder.
 
 É de extrema importância que esta etapa seja feita antes de iniciar qualquer outra etapa.
