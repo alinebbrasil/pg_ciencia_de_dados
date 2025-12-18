@@ -19,7 +19,7 @@ A partir do conjunto de dados da Olist, o projeto busca responder, entre outras,
 * Quais categorias de produtos apresentam maior volume de vendas?
 * Qual o comportamento dos pagamentos (formas de pagamento e valores)?
 
-Nem todas as perguntas necessariamente precisam ser respondidas integralmente. As limitações encontradas e os objetivos não atingidos são discutidos na seção de **Autoavaliação**.
+As limitações encontradas e os objetivos não atingidos são discutidos na seção de **Autoavaliação**.
 
 ---
 
