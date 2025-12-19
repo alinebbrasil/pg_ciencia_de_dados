@@ -1,6 +1,6 @@
 # MVP — Pipeline de Dados e Análise com Olist
 
-## 📌 Descrição
+## Descrição
 
 Este projeto acadêmico consiste no desenvolvimento de um **MVP de Engenharia de Dados**, no qual foi construído um **pipeline de dados em nuvem** contemplando as etapas de **busca, coleta, modelagem, carga e análise de dados**.
 
@@ -8,7 +8,7 @@ O trabalho utiliza dados públicos da empresa **Olist**, amplamente conhecidos n
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 O objetivo principal deste MVP é demonstrar, na prática, a construção de um pipeline de dados funcional, aplicando conceitos de **Engenharia de Dados** e **Análise de Dados**.
 
@@ -23,17 +23,17 @@ As limitações encontradas e os objetivos não atingidos são discutidos na se�
 
 ---
 
-## ☁️ Plataforma e Tecnologias Utilizadas
+## Plataforma e Tecnologias Utilizadas
 
 * **Plataforma:** Databricks (Community Edition)
-* **Linguagem:** Python
+* **Linguagem:** Python, SQL
 * **Bibliotecas:** Pandas, NumPy, Matplotlib, Seaborn
 * **Ambiente de Desenvolvimento:** Jupyter Notebook
 * **Controle de Versão:** Git e GitHub
 
 ---
 
-## 📂 Fonte dos Dados
+## Fonte dos Dados
 
 Os dados utilizados neste projeto são públicos e foram obtidos a partir do **Kaggle**, no dataset:
 
@@ -43,13 +43,13 @@ Este conjunto de dados contém informações anonimizadas sobre pedidos realizad
 
 ---
 
-## 🔍 Etapas do Projeto
+## Etapas do Projeto
 
-### 1️⃣ Busca e Coleta dos Dados
+### 1️. Busca e Coleta dos Dados
 
 Os arquivos foram obtidos diretamente do Kaggle e armazenados no ambiente em nuvem para posterior processamento. Por se tratar de um dataset público e estruturado, não foi necessário realizar web scraping.
 
-### 2️⃣ Modelagem dos Dados
+### 2️. Modelagem dos Dados
 
 Os dados foram organizados seguindo uma abordagem semelhante a um **Data Lake**, mantendo os arquivos separados por conceito (clientes, pedidos, produtos, pagamentos, etc.).
 
@@ -59,7 +59,7 @@ Foi realizada a análise da estrutura de cada conjunto de dados, incluindo:
 * Chaves de relacionamento;
 * Valores esperados para atributos numéricos e categóricos.
 
-### 3️⃣ Carga e Transformações
+### 3️. Carga e Transformações
 
 Durante esta etapa, foram realizadas transformações como:
 
@@ -70,7 +70,7 @@ Durante esta etapa, foram realizadas transformações como:
 
 As transformações foram documentadas diretamente no notebook por meio de células de código e comentários explicativos.
 
-### 4️⃣ Análise de Dados
+### 4️. Análise de Dados
 
 A análise foi dividida em duas partes:
 
@@ -90,7 +90,7 @@ Foram aplicadas análises exploratórias e visualizações para responder às pe
 
 ---
 
-## 📦 Estrutura do Repositório
+## Estrutura do Repositório
 
 ```
 pg_ciencia_de_dados/
@@ -103,7 +103,7 @@ pg_ciencia_de_dados/
 
 ---
 
-## 📊 Resultados
+## Resultados
 
 Os resultados incluem análises estatísticas e visualizações que permitem compreender melhor o comportamento dos pedidos, clientes e pagamentos na plataforma Olist.
 
@@ -111,7 +111,7 @@ As evidências das análises estão disponíveis diretamente no notebook, por me
 
 ---
 
-## 📝 Autoavaliação
+## Autoavaliação
 
 O desenvolvimento deste MVP permitiu aplicar, de forma prática, os conceitos de Engenharia de Dados vistos ao longo da disciplina.
 
@@ -124,7 +124,7 @@ Como trabalhos futuros, o projeto pode ser expandido com:
 
 ---
 
-## 👩‍🎓 Autora
+## Autora
 
 **Aline Bastos Brasil**
 
